@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Appointment from "./components/Appointments/Appointment";
 import Dashboard from "./components/Dashboard/Dashboard";
 import DownloadReport from "./components/DownloadReport/DownloadReports";
@@ -10,17 +10,14 @@ import Treatment from "./components/Treatment/SetTreatment";
 const App = () => {
   return (
     <Router>
-      <div>
-        <Switch>
-          <Route path="/login" component={LoginPage} />
-          <Route path="/dashboard" component={Dashboard} />
-          <Route path="/profile" component={ProfilePage} />
-          <Route path="/appointment" component={Appointment} />
-          <Route path="/treatment" component={Treatment} />
-          <Route path="/download-report" component={DownloadReport} />
-          <Route component={LoginPage} />
-        </Switch>
-      </div>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/appointment" element={<Appointment />} />
+        <Route path="/treatment" element={<Treatment />} />
+        <Route path="/download-report" element={<DownloadReport />} />
+      </Routes>
     </Router>
   );
 };
