@@ -3,7 +3,7 @@ import "./style.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const EmployeeLogin = () => {
+const PatientLogin = () => {
   const [values, setValues] = useState({
     email: "",
     password: "",
@@ -13,12 +13,12 @@ const EmployeeLogin = () => {
   axios.defaults.withCredentials = true;
   const handleSubmit = (event) => {
     // event.preventDefault()
-    // axios.post('http://localhost:3000/employee/employee_login', values)
+    // axios.post('http://localhost:3000/patient/patient_login', values)
     // .then(result => {
     //     if(result.data.loginStatus) {
     //         localStorage.setItem("valid", true)
     if (values.password == "patient") {
-      navigate("/employee_detail");
+      navigate("/patient_detail");
     }
 
     //     } else {
@@ -76,4 +76,4 @@ const EmployeeLogin = () => {
   );
 };
 
-export default EmployeeLogin;
+export default PatientLogin;

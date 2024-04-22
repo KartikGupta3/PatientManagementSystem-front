@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const EmployeeDetail = () => {
+const PatientDetail = () => {
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
   const [showPendingConfirmations, setShowPendingConfirmations] =
@@ -97,4 +97,4 @@ const EmployeeDetail = () => {
   );
 };
 
-export default EmployeeDetail;
+export default PatientDetail;
