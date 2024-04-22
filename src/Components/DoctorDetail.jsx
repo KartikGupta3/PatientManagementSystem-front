@@ -11,13 +11,15 @@ const DoctorDetail = () => {
   };
 
   const patients = [
-    { id: 1, name: "John Doe", treatment: "Medication A" },
-    { id: 2, name: "Jane Smith", treatment: "Medication B" },
-    { id: 3, name: "Alice Johnson", treatment: "Medication C" },
+    { id: 1, name: "Aarav Patel", treatment: "Medication A" },
+    { id: 2, name: "Diya Singh", treatment: "Medication B" },
+    { id: 3, name: "Kavya Reddy", treatment: "Medication C" },
   ];
 
   const handleTreatmentChange = (patientName) => {
-    navigate(`/change-treatment`, { state: { name: patientName,doct: state.name } });
+    navigate(`/change-treatment`, {
+      state: { name: patientName, doct: state.name },
+    });
   };
 
   return (

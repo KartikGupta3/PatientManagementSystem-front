@@ -16,6 +16,8 @@ import EmployeeDetail from "./Components/EmployeeDetail";
 import DoctorLogin from "./Components/DoctorLogin";
 import DoctorDetail from "./Components/DoctorDetail";
 import ChangeTreatment from "./Components/changeTreatment";
+import ManagePatients from "./Components/ManagePatients";
+import ManageDoctors from "./Components/ManageDoctors";
 function App() {
   return (
     <BrowserRouter>
@@ -26,6 +28,8 @@ function App() {
         <Route path="/doctorlogin" element={<DoctorLogin />}></Route>
         <Route path="/employee_detail/:id" element={<EmployeeDetail />}></Route>
         <Route path="/doctor_detail" element={<DoctorDetail />}></Route>
+        <Route path="/manage_patients" element={<ManagePatients />}></Route>
+        <Route path="/manage_doctor" element={<ManageDoctors />}></Route>
         <Route
           path="/change-treatment"
           element={<ChangeTreatment />}
