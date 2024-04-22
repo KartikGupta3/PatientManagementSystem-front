@@ -65,7 +65,7 @@ const Home = () => {
         </div>
         <div className='px-3 pt-2 pb-3 border shadow-sm w-25'>
           <div className='text-center pb-1'>
-            <h4>Employee</h4>
+            <h4>Patient</h4>
           </div>
           <hr />
           <div className='d-flex justify-content-between'>
@@ -75,12 +75,12 @@ const Home = () => {
         </div>
         <div className='px-3 pt-2 pb-3 border shadow-sm w-25'>
           <div className='text-center pb-1'>
-            <h4>Salary</h4>
+            <h4>Doctors</h4>
           </div>
           <hr />
           <div className='d-flex justify-content-between'>
             <h5>Total:</h5>
-            <h5>${salaryTotal}</h5>
+            <h5>{salaryTotal}</h5>
           </div>
         </div>
       </div>
