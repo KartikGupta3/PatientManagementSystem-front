@@ -12,6 +12,7 @@ import DoctorDetail from "./Components/DoctorDetail";
 import ChangeTreatment from "./Components/changeTreatment";
 import ManagePatients from "./Components/ManagePatients";
 import ManageDoctors from "./Components/ManageDoctors";
+import ConfirmAppointment from "./Components/confirmAppointment";
 function App() {
   return (
     <BrowserRouter>
@@ -22,6 +23,7 @@ function App() {
         <Route path="/doctorlogin" element={<DoctorLogin />}></Route>
         <Route path="/patient_detail" element={<PatientDetail />}></Route>
         <Route path="/doctor_detail" element={<DoctorDetail />}></Route>
+        <Route path="/confirm_appointment" element={<ConfirmAppointment />}></Route>
         <Route path="/manage_patients" element={<ManagePatients />}></Route>
         <Route path="/manage_doctor" element={<ManageDoctors />}></Route>
         <Route path="/change-treatment" element={<ChangeTreatment />} />

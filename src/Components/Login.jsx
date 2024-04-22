@@ -22,6 +22,10 @@ const Login = () => {
     //         localStorage.setItem("valid", true);
     if (values.password == "admin") {
       navigate("/dashboard");
+    } else if (values.password === "") {
+      setError("Empty Password");
+    } else {
+      setError("Incorrect password");
     }
     //     } else {
     //         setError(result.data.Error);

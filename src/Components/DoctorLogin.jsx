@@ -26,6 +26,8 @@ const DoctorLogin = () => {
     if (values.password === "doctor") {
       localStorage.setItem("valid", true);
       navigate("/doctor_detail", { state: { name: values.email } });
+    } else if (values.password === "") {
+      setError("Empty Password");
     } else {
       setError("Incorrect password");
     }

@@ -1,5 +1,4 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const DoctorDetail = () => {
@@ -10,16 +9,18 @@ const DoctorDetail = () => {
     navigate("/");
   };
 
+  const handleConfirmAppointments = () => {
+    navigate("/confirm_appointment");
+  };
+
   const patients = [
     { id: 1, name: "Aarav Patel", treatment: "Medication A" },
     { id: 2, name: "Diya Singh", treatment: "Medication B" },
     { id: 3, name: "Kavya Reddy", treatment: "Medication C" },
   ];
 
-  const handleTreatmentChange = (patientName) => {
-    navigate(`/change-treatment`, {
-      state: { name: patientName, doct: state.name },
-    });
+  const handleTreatmentChange = () => {
+    navigate(`/change-treatment`);
   };
 
   return (
@@ -46,7 +47,7 @@ const DoctorDetail = () => {
                       >
                         {patient.name}
                         <button
-                          onClick={() => handleTreatmentChange(patient.name)}
+                          onClick={() => handleTreatmentChange}
                           className="btn btn-sm btn-info"
                         >
                           Change Treatment
@@ -59,6 +60,12 @@ const DoctorDetail = () => {
                   <button className="btn btn-primary me-2">Edit</button>
                   <button className="btn btn-danger" onClick={handleLogout}>
                     Logout
+                  </button>
+                  <button
+                    className="btn btn-success ms-2"
+                    onClick={handleConfirmAppointments}
+                  >
+                    Confirm Appointments
                   </button>
                 </div>
               </div>

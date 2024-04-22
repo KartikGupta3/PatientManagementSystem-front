@@ -12,13 +12,17 @@ const PatientLogin = () => {
   const navigate = useNavigate();
   axios.defaults.withCredentials = true;
   const handleSubmit = (event) => {
-    // event.preventDefault()
+    event.preventDefault()
     // axios.post('http://localhost:3000/patient/patient_login', values)
     // .then(result => {
     //     if(result.data.loginStatus) {
     //         localStorage.setItem("valid", true)
     if (values.password == "patient") {
       navigate("/patient_detail");
+    } else if (values.password === "") {
+      setError("Empty Password");
+    } else {
+      setError("Incorrect password");
     }
 
     //     } else {
@@ -31,7 +35,7 @@ const PatientLogin = () => {
   return (
     <div className="d-flex justify-content-center align-items-center vh-100 loginPage">
       <div className="p-3 rounded w-25 border loginForm">
-        <div className="text-warning">{error && error}</div>
+        <div className="text-warning">{error}</div>
         <h2>Login Page</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
